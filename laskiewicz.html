@@ -1,0 +1,242 @@
+<html>
+<head>
+    <title>Thesis Defense Preparation</title>
+</head>
+<body>
+
+<h2 style="color:red;"><b>1. Discuss iterative instructions in the selected programming language (similarities and differences between them).</b></h2>
+<p>
+    Iterative instructions, commonly known as loops, are fundamental control structures in programming languages that allow code to be executed repeatedly based on a condition. In languages like Python, we primarily use <b>for</b> loops and <b>while</b> loops. The <b>for</b> loop iterates over a sequence (like a list or range), executing the block of code for each item, whereas the <b>while</b> loop continues to execute as long as a specified condition is true.
+
+    For example, a <b>for</b> loop:
+
+    <pre>
+for i in range(5):
+    print(i)
+    </pre>
+
+    This will print numbers from 0 to 4. A similar operation using a <b>while</b> loop:
+
+    <pre>
+i = 0
+while i < 5:
+    print(i)
+    i += 1
+    </pre>
+
+    Both loops perform the same task but differ in syntax and use cases. The <b>for</b> loop is generally used when the number of iterations is known, while the <b>while</b> loop is preferred when the number of iterations depends on a condition that may not be directly related to a sequence.
+</p>
+
+<h2 style="color:blue;"><b>2. Discuss the problem of recursion. What is it about? Give an example of an algorithm with a recursive and iterative solution.</b></h2>
+<p>
+    Recursion is a programming technique where a function calls itself directly or indirectly to solve a problem by breaking it down into smaller, more manageable sub-problems. It's particularly useful for problems that can be defined in terms of similar sub-problems.
+
+    For example, calculating the factorial of a number <b>n</b>:
+
+    Recursive solution:
+
+    <pre>
+def factorial(n):
+    if n == 0 or n == 1:
+        return 1
+    else:
+        return n * factorial(n - 1)
+    </pre>
+
+    Iterative solution:
+
+    <pre>
+def factorial(n):
+    result = 1
+    for i in range(2, n + 1):
+        result *= i
+    return result
+    </pre>
+
+    Both functions compute the factorial of <b>n</b>, but the recursive version calls itself, whereas the iterative version uses a loop.
+</p>
+
+<h2 style="color:green;"><b>3. Discuss the divide and conquer method on the selected example.</b></h2>
+<p>
+    The divide and conquer method is an algorithm design paradigm that works by recursively breaking down a problem into two or more sub-problems of the same or related type, until they become simple enough to be solved directly. The solutions to the sub-problems are then combined to give a solution to the original problem.
+
+    A classic example is the <b>Merge Sort</b> algorithm:
+
+    - <b>Divide</b>: Split the array into two halves.
+    - <b>Conquer</b>: Recursively sort each half.
+    - <b>Combine</b>: Merge the two sorted halves into a single sorted array.
+
+    This approach efficiently sorts an array in O(n log n) time, where <b>n</b> is the number of elements in the array.
+</p>
+
+<h2 style="color:purple;"><b>4. Compare the dynamic programming method with the greedy method on the chosen example.</b></h2>
+<p>
+    Dynamic programming and greedy methods are both algorithmic strategies used to solve optimization problems, but they differ in their approaches.
+
+    <b>Dynamic Programming</b> is used when the problem can be broken down into overlapping sub-problems with optimal substructure. It stores the results of sub-problems to avoid redundant computations.
+
+    <b>Greedy Method</b> makes the locally optimal choice at each step with the hope of finding the global optimum.
+
+    <b>Example</b>: The <b>Coin Change Problem</b>.
+
+    - <b>Greedy Approach</b>: Select the largest coin denomination less than the remaining amount until the total is reached. This works when coin denominations are canonical (like U.S. currency), but fails for arbitrary coin systems.
+    - <b>Dynamic Programming</b>: Compute the minimum number of coins needed for all amounts up to the target amount by building up solutions from smaller amounts.
+
+    The dynamic programming approach guarantees an optimal solution, whereas the greedy method may not always lead to the best overall solution.
+</p>
+
+<h2 style="color:orange;"><b>5. Explain the method of binary and linear searching. List the similarities and differences between these methods.</b></h2>
+<p>
+    <b>Linear Search</b> scans each element in a list sequentially until the target value is found or the list ends. It's simple but inefficient for large datasets, with a time complexity of O(n), where <b>n</b> is the number of elements.
+
+    <b>Binary Search</b> requires a sorted list and repeatedly divides the search interval in half. It compares the target value to the middle element of the list; if they are not equal, it eliminates half of the list from consideration. This method has a time complexity of O(log n).
+
+    <b>Similarities</b>:
+
+    - Both aim to find the position of a target value within a list.
+
+    <b>Differences</b>:
+
+    - <b>Efficiency</b>: Binary search is faster than linear search for large, sorted lists.
+    - <b>Preconditions</b>: Binary search requires the list to be sorted; linear search does not.
+    - <b>Implementation Complexity</b>: Linear search is simpler to implement.
+</p>
+
+<h2 style="color:teal;"><b>6. Discuss two selected sorting algorithms.</b></h2>
+<p>
+    Let's discuss <b>Bubble Sort</b> and <b>Quick Sort</b>.
+
+    <b>Bubble Sort</b>:
+
+    - <b>Definition</b>: A simple comparison-based algorithm where each pair of adjacent elements is compared, and the elements are swapped if they are in the wrong order.
+    - <b>Time Complexity</b>: O(n<sup>2</sup>) (O of n squared).
+    - <b>Example</b>: Sorting [3, 2, 1]:
+        - Compare 3 and 2, swap to get [2, 3, 1].
+        - Compare 3 and 1, swap to get [2, 1, 3].
+        - Repeat until the list is sorted.
+
+    <b>Quick Sort</b>:
+
+    - <b>Definition</b>: A divide and conquer algorithm that selects a 'pivot' element and partitions the array into sub-arrays of elements less than and greater than the pivot.
+    - <b>Time Complexity</b>: Average case O(n log n).
+    - <b>Example</b>: Sorting [3, 2, 1]:
+        - Choose pivot 2.
+        - Partition into [1] and [3].
+        - Recursively sort sub-arrays.
+
+    <b>Comparison</b>:
+
+    - <b>Efficiency</b>: Quick Sort is generally faster than Bubble Sort.
+    - <b>Use Cases</b>: Bubble Sort is useful for small datasets and educational purposes; Quick Sort is suitable for large datasets.
+</p>
+
+<h2 style="color:brown;"><b>7. Discuss the ways of representing integers and real numbers in the computer.</b></h2>
+<p>
+    <b>Integers</b> are represented in binary using fixed-length sequences of bits, typically using two's complement for signed numbers. This allows for straightforward arithmetic operations and representation of both positive and negative numbers.
+
+    <b>Real Numbers</b> are represented using floating-point notation, which includes a sign bit, exponent, and mantissa (or significand). This allows computers to represent a wide range of decimal numbers, including very small and very large values.
+
+    <b>Example</b>:
+
+    - The integer 5 in binary is 0101.
+    - The real number 5.75 might be represented in IEEE 754 floating-point format.
+
+    <b>Issues</b>:
+
+    - <b>Overflow</b>: Occurs when a calculation produces a result larger than the maximum storable value.
+    - <b>Precision</b>: Floating-point representation can introduce rounding errors due to limited precision.
+</p>
+
+<h2 style="color:navy;"><b>8. Discuss the data structure of the BST (binary search tree). Give (and justify) the pessimistic cost of operations on the BST. Enter the key search algorithm in the BST.</b></h2>
+<p>
+    A <b>Binary Search Tree (BST)</b> is a node-based data structure where each node has at most two children, referred to as the left child and the right child. For all nodes:
+
+    - The left subtree contains nodes with keys less than the node's key.
+    - The right subtree contains nodes with keys greater than the node's key.
+
+    <b>Pessimistic Cost</b>:
+
+    - The worst-case time complexity for search, insert, and delete operations is O(n), occurring when the tree becomes unbalanced (e.g., resembling a linked list).
+
+    <b>Key Search Algorithm</b>:
+
+    <pre>
+def search_BST(node, key):
+    if node is None or node.key == key:
+        return node
+    if key < node.key:
+        return search_BST(node.left, key)
+    else:
+        return search_BST(node.right, key)
+    </pre>
+
+    <b>Justification</b>:
+
+    - In the worst case, we may need to traverse all nodes, hence O(n) time complexity.
+</p>
+
+<h2 style="color:maroon;"><b>9. Discuss the fixed-point form of the natural and integer numbers. Explain the concept of overflow and underflow. Give the algorithms: converting numbers from the system of a base p ∈ {2, 3, … ,9} to the decimal system and from the decimal system to the system of the base p ∈ {2, 3, … ,9}</b></h2>
+<p>
+    <b>Fixed-Point Representation</b>:
+
+    - Numbers are represented with a fixed number of digits after the radix point (decimal point), suitable for representing integers and fractions with a known number of decimal places.
+
+    <b>Overflow</b>:
+
+    - Occurs when a calculation exceeds the maximum value the data type can hold.
+
+    <b>Underflow</b>:
+
+    - Happens when a calculation results in a value closer to zero than the smallest representable non-zero number.
+
+    <b>Algorithm to Convert from Base p to Decimal</b>:
+
+    1. Start with the least significant digit.
+    2. Multiply each digit by p raised to the position index.
+    3. Sum all the results.
+
+    <b>Example</b>: Convert 210 (base 3) to decimal.
+
+    - Calculation: 2*(3<sup>2</sup>) + 1*(3<sup>1</sup>) + 0*(3<sup>0</sup>) = 2*9 + 1*3 + 0*1 = 18 + 3 + 0 = 21.
+
+    <b>Algorithm to Convert from Decimal to Base p</b>:
+
+    1. Divide the decimal number by p.
+    2. Record the remainder.
+    3. Use the quotient for the next division.
+    4. Repeat until the quotient is zero.
+    5. The base p number is the remainders read in reverse.
+
+    <b>Example</b>: Convert 21 to base 3.
+
+    - 21 ÷ 3 = 7, remainder 0.
+    - 7 ÷ 3 = 2, remainder 1.
+    - 2 ÷ 3 = 0, remainder 2.
+    - Base 3 number: Read remainders in reverse: 2 1 0.
+</p>
+
+<h2 style="color:olive;"><b>10. Explain the bisection method for determining the zeros of the given function. Discuss the criteria for terminating the iterative process.</b></h2>
+<p>
+    The <b>Bisection Method</b> is a root-finding technique that repeatedly divides an interval in half and selects the subinterval in which the function changes sign, thereby narrowing down the location of a zero (root) of the function.
+
+    <b>Steps</b>:
+
+    1. Choose initial interval [a, b] where f(a) and f(b) have opposite signs.
+    2. Compute the midpoint c = (a + b) / 2.
+    3. Evaluate f(c):
+        - If f(c) is zero (or sufficiently close), c is the root.
+        - If f(c) has the same sign as f(a), set a = c.
+        - If f(c) has the same sign as f(b), set b = c.
+    4. Repeat steps 2-3 until the interval is sufficiently small.
+
+    <b>Termination Criteria</b>:
+
+    - <b>Tolerance Level</b>: Stop when the absolute difference |b - a| is less than a predetermined tolerance ε (epsilon).
+    - <b>Maximum Iterations</b>: Stop after a set number of iterations to prevent infinite loops.
+    - <b>Function Value</b>: Stop if |f(c)| is less than a small threshold, indicating c is close enough to a root.
+
+    By applying these criteria, we ensure the method converges to an accurate approximation of the root within acceptable limits.
+</p>
+
+</body>
+</html>

@@ -1,0 +1,100 @@
+<html>
+<head>
+    <title>Thesis Defense Preparation</title>
+</head>
+<body>
+
+<h2 style="color:red;"><b>1. Gauss elimination method.</b></h2>
+<p>Sure, the <b>Gauss elimination method</b> is a systematic way to solve systems of linear equations. The idea is to convert the system's augmented matrix into an upper triangular form, which simplifies the process of solving for the variables through back-substitution.
+
+For example, let's consider this system of equations:
+<br>2x + 3y = 8
+<br>x - y = 2
+
+We can use Gauss elimination to eliminate one variable and then solve for the other, making the process straightforward.</p>
+
+<h2 style="color:blue;"><b>2. Bubble sort.</b></h2>
+<p><b>Bubble sort</b> is one of the simplest sorting algorithms. It works by repeatedly stepping through the list, comparing adjacent elements, and swapping them if they are in the wrong order. This way, smaller values "bubble" up to the top of the list.
+
+For instance, if we have the list [5, 2, 9, 1], we compare 5 and 2. Since 5 is greater than 2, we swap them. We continue this process, and after several iterations, the list becomes sorted as [1, 2, 5, 9].</p>
+
+<h2 style="color:green;"><b>3. Euclidean algorithm.</b></h2>
+<p>The <b>Euclidean algorithm</b> is a method to find the greatest common divisor (GCD) of two integers. It relies on the principle that the GCD of two numbers also divides their difference.
+
+For example, to find the GCD of 48 and 18:
+<ul>
+    <li>We divide 48 by 18, which gives a remainder of 12.</li>
+    <li>Then, we divide 18 by 12, resulting in a remainder of 6.</li>
+    <li>Next, we divide 12 by 6, and the remainder is 0.</li>
+</ul>
+The last non-zero remainder, 6, is the GCD of 48 and 18.</p>
+
+<h2 style="color:orange;"><b>4. Eratosthenes sieve.</b></h2>
+<p>The <b>Sieve of Eratosthenes</b> is an ancient algorithm for finding all prime numbers up to a certain limit. It systematically eliminates the multiples of primes, leaving only the primes themselves.
+
+For example, to find all primes less than 10:
+<ol>
+    <li>List numbers from 2 to 9.</li>
+    <li>Starting with 2, cross out all multiples of 2.</li>
+    <li>Move to the next uncrossed number, 3, and cross out its multiples.</li>
+    <li>The remaining uncrossed numbers are primes: 2, 3, 5, and 7.</li>
+</ol></p>
+
+<h2 style="color:purple;"><b>5. Newton methods.</b></h2>
+<p><b>Newton's method</b>, or the Newton-Raphson method, is an iterative technique to approximate the roots of a real-valued function. It uses the function's derivative to converge to a root.
+
+For example, if we want to find the square root of a number <b>a</b>, we can set up the function <b>f(x) = x² - a</b> (read as "f of x equals x squared minus a"). Starting with an initial guess <b>x<sub>0</sub></b> (read as "x sub zero"), we apply:
+<br><b>x<sub>n+1</sub> = x<sub>n</sub> - f(x<sub>n</sub>) / f&#8242;(x<sub>n</sub>)</b> (read as "x sub n plus one equals x sub n minus f of x sub n divided by f prime of x sub n")
+<br>This process quickly converges to the actual square root of <b>a</b>.</p>
+
+<h2 style="color:brown;"><b>6. Horner method.</b></h2>
+<p>The <b>Horner's method</b> is an efficient algorithm for evaluating polynomials at a given point and for polynomial division. It restructures the polynomial to minimize the number of multiplications.
+
+For instance, to evaluate <b>P(x) = 2x³ - 6x² + 2x - 1</b> at <b>x = 3</b>, we rewrite it using Horner's method:
+<br><b>P(x) = ((2x - 6)x + 2)x - 1</b> (read as "P of x equals open parenthesis open parenthesis two x minus six close parenthesis times x plus two close parenthesis times x minus one")
+<br>By evaluating this nested expression step by step, we find that <b>P(3) = 5</b>.</p>
+
+<h2 style="color:teal;"><b>7. Properties of normal distribution.</b></h2>
+<p>The <b>normal distribution</b> is a continuous probability distribution that is symmetrical around the mean, depicting that data near the mean are more frequent in occurrence. It's often referred to as the bell curve due to its shape.
+
+Key properties include:
+<ul>
+    <li>It's defined by its mean (<b>&mu;</b>) and standard deviation (<b>&sigma;</b>) (read as "mu" and "sigma").</li>
+    <li>Approximately 68% of the data falls within one standard deviation of the mean.</li>
+    <li>The curve is symmetrical, so the mean, median, and mode are all equal.</li>
+</ul>
+For example, in human height, most people are of average height, with fewer being extremely tall or short, which fits the normal distribution.</p>
+
+<h2 style="color:magenta;"><b>8. How to calculate Fibonacci number.</b></h2>
+<p>Calculating a <b>Fibonacci number</b> involves summing the two preceding numbers in the sequence, starting from 0 and 1. There are several methods to compute it, including recursion, iteration, and using formulas.
+
+For example, using iteration:
+<ol>
+    <li>Start with <b>F<sub>0</sub> = 0</b> and <b>F<sub>1</sub> = 1</b> (read as "F sub zero equals zero" and "F sub one equals one").</li>
+    <li>Then <b>F<sub>n</sub> = F<sub>n-1</sub> + F<sub>n-2</sub></b> (read as "F sub n equals F sub n minus one plus F sub n minus two").</li>
+    <li>So, <b>F<sub>2</sub> = 1</b>, <b>F<sub>3</sub> = 2</b>, <b>F<sub>4</sub> = 3</b>, <b>F<sub>5</sub> = 5</b>, and so on (read as "F sub two equals one", "F sub three equals two", "F sub four equals three", "F sub five equals five").</li>
+</ol>
+Alternatively, for larger <b>n</b>, we can use Binet's formula, which involves the golden ratio, to compute <b>F<sub>n</sub></b> directly.</p>
+
+<h2 style="color:navy;"><b>9. Object oriented programming.</b></h2>
+<p><b>Object-oriented programming (OOP)</b> is a programming paradigm that uses "objects" to design applications and computer programs. It emphasizes concepts like classes, inheritance, and polymorphism.
+
+Key principles include:
+<ul>
+    <li><b>Encapsulation</b>: Bundling data with methods that operate on that data.</li>
+    <li><b>Inheritance</b>: Creating new classes from existing ones.</li>
+    <li><b>Polymorphism</b>: Methods can perform differently based on the object.</li>
+    <li><b>Abstraction</b>: Hiding complex reality while exposing only the necessary parts.</li>
+</ul>
+For example, if we're programming a game, we might have a base class <b>Character</b> and derive classes like <b>Hero</b> and <b>Villain</b>, each with their own specific properties and methods.</p>
+
+<h2 style="color:olive;"><b>10. Relational model of the database. Tables, primary and foreign keys, database table relationships.</b></h2>
+<p>The <b>relational model</b> organizes data into tables (relations) composed of rows and columns. It uses keys to establish relationships between tables.
+
+- A <b>primary key</b> uniquely identifies each record in a table.
+- A <b>foreign key</b> is a field in one table that refers to the primary key of another table, establishing a link between them.
+
+For example, in a database, we might have a <b>Customers</b> table with a <b>CustomerID</b> as the primary key, and an <b>Orders</b> table where each order record includes a <b>CustomerID</b> foreign key. This relationship allows us to associate orders with the customers who made them.</p>
+
+</body>
+</html>
